@@ -108,28 +108,10 @@ python ./lib/core/eval_otb.py OTB2013 ./result SiamRPN* 0 1
 <div id="VOT-TEST"></div>
 
 #### **For VOT**
-We provide a script to connect python with Matlab VOT-TOOLKIT. We will use these scripts for fast testing and hyper-parameter tuning. <br/>
-**1) install matlab-python engin**
-```
-cd $MATLAB_ROOT/extern/engines/python
-python setup.py install
-```
-- **Note:** You should install Matlab R2017b or higher version to support python-matlab api. We use Matlab R2018b.
+1) Please refer to VOT official [tutorial](http://www.votchallenge.net/howto/workspace.html) to set up your workspace. <br/>
+2) Move `txt` result files to `result` directory in vot-workspace. Please keep directory name coincident with `run_analysis.m`. <br/>
+3) run `run_analysis.m`
 
-**2) create vot-toolkit workspace**
-Please refer to VOT official [tutorial](http://www.votchallenge.net/howto/workspace.html).
-
-- **Note:** Your vot workspace should be named with `vot-workspace2015` (or `vot-workspace2016` et.). 
-
-**3) modify our files**
-```
-b. Modify the 9th and 11th rows in `lib/core/get_eao.m` to your vot-toolkit path. 
-```
-
-**4) run**
-```
-python ./lib/core/eval_vot.py VOT2015 ./result
-```
 :cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud::cloud:
 ### Reproduce -- Train/Test/Tune
 
@@ -154,13 +136,10 @@ mpiexec -n 16 python ./siamese_tracking/test_epochs.py --arch SiamFCRes22 --star
 python ./lib/core/eval_otb.py OTB2013 ./result SiamFC* 0 100 2>&1 | tee logs/siamfc_eval_epoch.log
 ```
 
-- VOT testing details [here](#VOT-TEST).
-
-
 
 ##### [Param-Tune]()
 <div id="TUNE-TOOLKIT"></div>
-Siamese trackers are severely sensitive to hyper-parameters in common sense. We provide a toolkit for selecting optimal hyper-parameters on a benchmark (for SiamFC). Wish our efforts will be helpful to your work.
+Siamese trackers are severely sensitive to hyper-parameters in common sense. We provide a toolkit for selecting optimal hyper-parameters on a benchmark (for SiamFC). Wish our efforts will be helpful to your work. Only OTB is supported.
 
 ```
 mpiexec -n 16  python ./siamese_tracking/tune_gene.py --arch SiamFCRes22 --resume ./snapshot/CIResNet22.pth --dataset OTB2013 --gpu_nums 4 2>&1 | tee logs/gene_tune_fc.log
