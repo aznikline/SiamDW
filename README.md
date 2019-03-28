@@ -33,6 +33,7 @@ Siamese tracker is severely sensitive to hyper-parameter, which is a common sens
 | CIResIncep22-FC| 0.673 | 0.650 | 0.332 | 0.305 | 0.251|  
 | CIResNext22-FC | 0.668 | 0.651 | 0.336 | 0.304 | 0.246|  
 
+- Some reproduced results above are slightly better than paper.
 - Recently we found the GOT10K dataset shows better performance for training SiamFC. So we provide the results being trained on GOT10K.
 - CIResNet22W-FC is our recent work not included in our paper. It is hoped that our efforts  can bring more inspirations to you.
 
@@ -86,15 +87,15 @@ ${Tracking_ROOT}
 **For training SiamFC** <br/>
 We pre-process `VID` and `GOT10K` to training pairs. You can download it [here]().
 
-
-
 ### Test
+Download model from [Onedrive](https://mailccsf-my.sharepoint.com/:f:/g/personal/zhipeng_mail_ccsf_edu/Et63uccGMABDo6u9Q-kD0ckBR9oXSGlEuLqDuoSwklBtxA?e=ef3Wrp), [Google drive](https://drive.google.com/drive/folders/19dBWxOqZnvM0FsgXGzH2Y7Bg7wgYMEoO?usp=sharing) or [Baidu drive](https://pan.baidu.com/s/18Alsd2R941gDLQAEw3srVw), and put them to `snapshot` directory
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python ./siamese_tracking/test_siamfc.py --arch SiamFCRes22 --resume ./snapshot/CIResNet22.pth --dataset OTB2013
 or 
 CUDA_VISIBLE_DEVICES=0 python ./siamese_tracking/test_siamrpn.py --arch SiamRPNRes22 --resume ./snapshot/CIResNet22_RPN.pth --dataset VOT2017
 ```
+- Extracted code for Baidu drive is required due to softerware maintenance recently. Please input `h8vs` in the download box. 
 
 ### Analysz testing results
 #### **For OTB**
@@ -135,7 +136,8 @@ python ./lib/core/eval_vot.py VOT2015 ./result
 #### Preparation
 - prepare conda environment and matlab-python API according to details above
 - modify dataset path in  `experiments/train/*.yaml` to your needs.
-- download pretrained model from [onedrive], [google drive](https://drive.google.com/drive/folders/1RIMB9542xXp60bZwndTvmIt2jogxAIX3?usp=sharing) or [baidu], and put them to `pretrain` directory
+- download pretrained model from [Onedrive](https://mailccsf-my.sharepoint.com/:f:/g/personal/zhipeng_mail_ccsf_edu/EtXBYkgTVO9CghJ4HOLV3pQBTELpf4MSFFv1P952Rp9mXA?e=E0C2gw), [Google drive](https://drive.google.com/drive/folders/1RIMB9542xXp60bZwndTvmIt2jogxAIX3?usp=sharing) or [Baidu Drive](https://pan.baidu.com/s/10JzUr_z8e53ZSD8lhFxn1w), and put them to `pretrain` directory
+- Extracted code for Baidu drive is required due to softerware maintenance recently. Please input `h8vs` in the download box. 
 #### SiamFC
 
 ##### [Epoch Train]()
