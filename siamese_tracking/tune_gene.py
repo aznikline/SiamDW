@@ -1,8 +1,9 @@
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft
 # Licensed under the MIT License.
-# Written by Zhipeng Zhang (zhangzhipeng2017@ia.ac.cn)
-# Details: SiamFC training script
+# Written by Zhipeng Zhang and Hongyuan Yu
+# Details: SiamFC tuning script
+# Only supprt OTB
 # ------------------------------------------------------------------------------
 from __future__ import absolute_import
 import _init_paths
@@ -93,15 +94,9 @@ def fitness(indv):
     config['hp']['scale_lr'] = scale_lr
     config['hp']['w_influence'] = window_influence
 
-    if args.dataset.startswith('OTB'):
-        auc = auc_otb(tracker, net, config)
-        print("scale_step: {0}, scale_lr: {1}, scale_penalty: {2}, window_influence: {3}, auc: {4}".format(scale_step, scale_lr, scale_penalty, window_influence, auc.item()))
-        return auc.item()
-
-    elif args.dataset.startswith('VOT'):
-        eao = eao_vot(tracker, net, config)
-        print("scale_step: {0}, scale_lr: {1}, scale_penalty: {2}, window_influence: {3}, eao: {4}".format(scale_step, scale_lr, scale_penalty, window_influence, eao))
-        return eao
+    auc = auc_otb(tracker, net, config)
+    print("scale_step: {0}, scale_lr: {1}, scale_penalty: {2}, window_influence: {3}, auc: {4}".format(scale_step, scale_lr, scale_penalty, window_influence, auc.item()))
+    return auc.item()
 
 
 if __name__ == "__main__":
