@@ -135,7 +135,7 @@ python ./lib/core/eval_vot.py VOT2015 ./result
 #### Preparation
 - prepare conda environment and matlab-python API according to details above
 - modify dataset path in  `experiments/train/*.yaml` to your needs.
-- download pretrained model [here](https://drive.google.com/drive/folders/1RIMB9542xXp60bZwndTvmIt2jogxAIX3?usp=sharing) and put them to `pretrain` directory
+- download pretrained model from [onedrive], [google drive](https://drive.google.com/drive/folders/1RIMB9542xXp60bZwndTvmIt2jogxAIX3?usp=sharing) or [baidu], and put them to `pretrain` directory
 #### SiamFC
 
 ##### [Epoch Train]()
