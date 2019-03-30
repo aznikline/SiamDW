@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft
 # Licensed under the MIT License.
-# Written by Zhipeng Zhang (zhangzhipeng2017@ia.ac.cn)
+# Written by Zhipeng Zhang and Houwen Peng
+# Email: houwen.peng@microsoft.com
 # Details: siamfc dataset generator
 # ------------------------------------------------------------------------------
 

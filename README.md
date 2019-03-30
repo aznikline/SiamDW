@@ -1,6 +1,6 @@
 # Deeper and Wider Siamese Networks for Real-Time Visual Tracking
 ## News
-- :sunny::sunny: Our [paper]() have been accepted by [CVPR2019]() (**Oral**).
+- :sunny::sunny: Our [paper](https://arxiv.org/abs/1901.01660) have been accepted by [CVPR2019](http://openaccess.thecvf.com/menu.py) (**Oral**).
 - :sunny::sunny: We provide a [parameter tuning toolkit]() for siamese tracking framework.
 
 
@@ -9,7 +9,7 @@ Siamese networks have drawn great attention in visual tracking because of their 
   
 Our proposals improve the performances of fully convolutional siamese trackers by,
 1) introducing CIR and CIR-D units to unveil the power of deeper and wider networks like [ResNet](https://arxiv.org/abs/1512.03385) and [Inceptipon](https://arxiv.org/abs/1409.4842); 
-2) designing reasonable backbones that are guilded by the analysis of how internal network factors (eg. receptive field, stride, output feature size) affect tracking performances.
+2) designing backbone networks according to the analysis on internal network factors (e.g. receptive field, stride, output feature size), which affect tracking performances.
 
 <!-- :tada::tada: **Highlight !!**
 Siamese tracker is severely sensitive to hyper-parameter, which is a common sense in tracking field. Although significant progresses have been made in some works, the result is hard to reproduce. In this case, we provide a [parameter tuning toolkit]() to make our model being reproduced easily. We hope our efforts and supplies will be helpful to your work. -->
@@ -22,7 +22,7 @@ Siamese tracker is severely sensitive to hyper-parameter, which is a common sens
 | Alex-RPN     | -     | 0.637 | 0.349 | 0.344 | 0.244 |
 | CIResNet22-FC  | 0.663 | 0.644 | 0.318 | 0.303 | 0.234 |
 | CIResIncep22-FC| 0.662 | 0.642 | 0.310 | 0.295 | 0.236 |
-| CIResNext22-FC | 0.659 | 0.633 | 0.297 | 0.278 | 0.229 |
+| CIResNext23-FC | 0.659 | 0.633 | 0.297 | 0.278 | 0.229 |
 | CIResNext22-RPN| 0.674 | 0.666 | 0.381 | 0.376 | 0.294 |
 
 #### Main results training with GOT-10k (SiamFC)
@@ -33,10 +33,9 @@ Siamese tracker is severely sensitive to hyper-parameter, which is a common sens
 | CIResIncep22-FC| 0.673 | 0.650 | 0.332 | 0.305 | 0.251|  
 | CIResNext22-FC | 0.668 | 0.651 | 0.336 | 0.304 | 0.246|  
 
-- Some reproduced results above are slightly better than paper.
-- Recently we found the GOT10K dataset shows better performance for training SiamFC. So we provide the results being trained on GOT10K.
-- CIResNet22W-FC is our recent work not included in our paper. It is hoped that our efforts  can bring more inspirations to you.
-
+- Some reproduced results listed above are slightly better than the ones in the paper.
+- Recently we found that training on GOT10K dataset can achieve better performance for SiamFC. So we provide the results being trained on GOT10K.
+- CIResNet22W-FC is our recent work, which is not included in our paper.
 
 #### Note
 - You can download [raw results](https://drive.google.com/file/d/1rTC2XKJ2bznVjtXW-UAzeUGc7QizeLP9/view?usp=sharing) here without running the code.
@@ -151,7 +150,7 @@ mpiexec -n 16  python ./siamese_tracking/tune_gene.py --arch SiamFCRes22 --resum
 If any part of our paper and code is helpful to your work, please generously cite with:
 
 ```
-@inproceedings{Zhang_2019_CVPR,
+@inproceedings{SiamDW_2019_CVPR,
     author={Zhang, Zhipeng and Peng, Houwen},
     title={Deeper and Wider Siamese Networks for Real-Time Visual Tracking},
     booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
@@ -161,7 +160,6 @@ If any part of our paper and code is helpful to your work, please generously cit
 
 ## License
 Licensed under an MIT license.
-
 
 
 

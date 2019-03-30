@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft
 # Licensed under the MIT License.
-# Written by Zhipeng Zhang and Hongyuan Yu
+# Writtern by Houwen Peng and Zhipeng Zhang
+# Email: houwen.peng@microsoft.com
 # Details: SiamFC tuning script
 # Only supprt OTB
 # ------------------------------------------------------------------------------

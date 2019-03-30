@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft
 # Licensed under the MIT License.
-# Written by Zhipeng Zhang (zhangzhipeng2017@ia.ac.cn)
+# Written by Houwen Peng and Zhipeng Zhang
+# Email: houwen.peng@microsoft.com
 # Details: This script provides cross-correlation head of SiamFC
 # Main Results: see readme.md
 # ------------------------------------------------------------------------------

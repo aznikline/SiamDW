@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft
 # Licensed under the MIT License.
-# Written by Zhipeng Zhang (zhangzhipeng2017@ia.ac.cn)
+# Written by Houwen Peng and Zhipeng Zhang
+# Email: houwen.peng@microsoft.com
 # siamrpn class
 # ------------------------------------------------------------------------------
 import torch
@@ -32,7 +33,7 @@ class SiamRPN(object):
             cfg_benchmark = cfg[self.info.dataset]
             p.update(cfg_benchmark)
             p.renew()
-        
+
         # for vot17 or vot18: from siamrpn released
         if '2017' in self.info.dataset:
             if ((target_sz[0] * target_sz[1]) / float(state['im_h'] * state['im_w'])) < 0.004:

@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft
 # Licensed under the MIT License.
-# Written by Zhipeng Zhang (zhangzhipeng2017@ia.ac.cn)
+# Written by Houwen Peng and Zhipeng Zhang
+# Email: houwen.peng@microsoft.com
 # Clean testing scripts for SiamFC
 # New: support GENE tuning
 # ------------------------------------------------------------------------------
@@ -247,7 +248,7 @@ def eao_vot(tracker, net, config):
     for video in video_keys[:1]:
         video_result = track_tune(tracker, net, dataset[video], config)
         results.append(video_result)
-        
+
     year = config['benchmark'][-4:]  # need a str, instead of a int
     eng.cd('./lib/core')
     eao = eng.get_eao(results, year)

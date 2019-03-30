@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft
 # Licensed under the MIT License.
-# Written by Zhipeng Zhang (zhangzhipeng2017@ia.ac.cn)
+# Written by Houwen Peng and Zhipeng Zhang
+# Email: houwen.peng@microsoft.com
 # Details: This script provides main models proposed in CVPR2019 paper
 #    1) SiamFCRes22: SiamFC with CIResNet-22 backbone
 #    2) SiamFCRes22: SiamFC with CIResIncep-22 backbone
